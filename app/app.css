@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --azul : hsl(223, 87%, 63%);
+    --celeste : hsl(223, 100%, 88%);
+    --rojo : hsl(354, 100%, 66%);
+    --plomo : hsl(0, 0%, 59%);
+    --negro : hsl(209, 33%, 12%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Libre Franklin', sans-serif;
+
+}
+
+.contenedor{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;    
+}
+
+.header .titulo{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 300;
+    color: var(--plomo);
+}
+.header .parrafo{
+    text-align: center;
+    color: var(--negro);
+    font-weight: 300;
+}
+.negro{
+    font-weight: 700;
+    color: var(--negro);
+}
+.registro{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.input{
+    border-radius: 100px;
+    border: 1px solid var(--celeste);
+    padding: 12px 20px;
+    width: 300px;
+}
+.input::placeholder{
+    color: var(--plomo);
+}
+
+.input:focus , .btn:focus{
+    outline: none;
+}
+
+.btn{
+    border: none;
+    border-radius: 100px;
+    padding: 12px 40px;
+    background: var(--azul);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity , box-shadow  .5s;
+}
+.btn:hover{
+    opacity: .8;
+    color: #fff;
+    box-shadow: 0px 0px 8px var(--plomo);
+}
+.mensaje-incorrecto{
+    color: var(--rojo);
+    font-style: italic;
+    font-size: 12px;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    display: none;
+}
+.input-incorrecto .mensaje-incorrecto{
+    display: block;
+}
+.input-incorrecto .input{
+    border: 1px solid var(--rojo);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;    
+}
+
+.contenedor-iconos{
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+.fab{
+    border-radius: 50%;
+    padding: 9px;
+    font-size: 14px;
+    color: var(--azul);
+    box-shadow: 0px 0px 2px var(--plomo);
+    cursor: pointer;
+    transition: background ,color  .5s;
+}
+.fab:hover{
+    background: var(--azul);
+    color: #fff;
+}
+.copy{
+    font-size: 13px;
+    color: var(--plomo);
+}
+.logo{
+    width: 70px;
+}
+
+.img{
+    width: 500px;
+}
